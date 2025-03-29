@@ -38,6 +38,7 @@ class AzureOpenAIChat:
         return {} 
 def transcribe_audio(video_url):
     """Transcribe audio using Azure's Whisper API."""
+    file_name = "unknown_file"
     try:
         # Get credentials from streamlit secrets
         api_key = st.secrets["whisper"]["api_key"]
